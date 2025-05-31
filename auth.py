@@ -14,3 +14,10 @@ class User:
                 return True
 
         return False
+
+    def login(self, username: str, password: str) -> bool:
+        for user in self.users:
+            if username == user["username"] and password == user["password"]:
+                return True
+
+        return False
